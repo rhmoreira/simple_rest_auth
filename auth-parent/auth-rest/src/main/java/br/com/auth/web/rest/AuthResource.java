@@ -75,7 +75,7 @@ public class AuthResource extends BaseResource {
 		if (acessoId == null)
 			return respond(Status.UNAUTHORIZED, Message.newMessage("Acesso negado"));
 		else
-			return ok();
+			return ok(acessoId);
 	}
 	
 	@Path("/token/invalidate")
